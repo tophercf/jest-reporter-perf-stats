@@ -3,9 +3,16 @@
   "version": "1.0.0",
   "description": "Jest reporter to log performance statistics for various maxWorker configurations",
   "main": "build/index.js",
+  "files": [
+    "build/**/*"
+  ],
   "scripts": {
     "test_one_worker": "tsc && jest --maxWorkers=1",
-    "test_two_worker": "tsc && jest --maxWorkers=2"
+    "test_two_worker": "tsc && jest --maxWorkers=2",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "keywords": [
     "jest",
