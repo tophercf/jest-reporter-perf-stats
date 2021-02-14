@@ -10,7 +10,7 @@ Stats recorded: total tests, total suites, total time in seconds, max workers fo
 1. install custom reporter to your repo that you want to benchmark test duration 
 `npm i --save-dev jest-reporter-perf-stats`
 
-2. add custom reporters to your `jest.config.js` 
+2. add the custom reporter to your `jest.config.js` 
 ```
 module.exports = {
   ...
@@ -28,9 +28,9 @@ Example: `./node_modules/jest-reporter-perf-stats/scripts/perf.sh 23 3` to run u
 PRs welcome! 
 
 Sanity check that reporter works:
-0. install dependencies `npm i`  
-1. Run `npm run test_one_worker`  
-2. Ensure log.csv outputs correctly and CLI outputs something akin to:
+1. install dependencies `npm i`  
+2. Run `npm run test_one_worker`  
+3. Ensure log.csv outputs correctly and CLI outputs something akin to:  
 
 ![Image of log.csv File Output](https://github.com/tophercf/jest-reporter-perf-stats/blob/main/img/log_csv.PNG)
 
