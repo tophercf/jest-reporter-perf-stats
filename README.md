@@ -14,22 +14,25 @@ Stats recorded: total tests, total suites, total time in seconds, max workers fo
 ```
 module.exports = {
   ...
-  reporters: ['default', '<rootDir>node_modules/jest-reporter-perf-stats/build/index.js'],
+  reporters: ['default', 'jest-reporter-perf-stats'],
   ...
 };
 ```
 See Jest's [documentation](https://jestjs.io/docs/en/configuration#reporters-arraymodulename--modulename-options) for more background on adding custom jest reporters.
 
 3. run the performance benchmark with the included script `node_modules/jest-reporter-perf-stats/scripts/perf.sh`. 
-Usage: `node_modules/jest-reporter-perf-stats/scripts/perf.sh <maxWorkers> <number of iterations>` 
-Example: `node_modules/jest-reporter-perf-stats/scripts/perf.sh 23 3` to run up to 23 max workers in the benchmark, each maxWorker test run will be done 3 times. 
+Usage: `./node_modules/jest-reporter-perf-stats/scripts/perf.sh <maxWorkers> <number of iterations>`  
+Example: `./node_modules/jest-reporter-perf-stats/scripts/perf.sh 23 3` to run up to 23 max workers in the benchmark, each maxWorker test run will be done 3 times. 
 
 ## Contributing
-PRs welcome!  Would be curious to know how to alias the reporter with just a name, similiar to other reporters like `jest-stare` or `default`.
+PRs welcome! 
 
 Sanity check that reporter works:
-1. Run `npm run test_one_worker`
+0. install dependencies `npm i`  
+1. Run `npm run test_one_worker`  
 2. Ensure log.csv outputs correctly and CLI outputs something akin to:
+
+[[https://github.com/tophercf/jest-reporter-perf-stats/blob/main/img/log_csv.png|alt=octocat]]
 
 ```
 Test Suites: 1 failed, 1 passed, 2 total

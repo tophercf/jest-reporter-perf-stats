@@ -4,7 +4,8 @@
   "description": "Jest reporter to log performance statistics for various maxWorker configurations",
   "main": "build/index.js",
   "files": [
-    "build/**/*"
+    "build/**/*",
+    "scripts/**/*"
   ],
   "scripts": {
     "test_one_worker": "tsc && jest --maxWorkers=1",
