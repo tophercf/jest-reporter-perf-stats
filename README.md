@@ -18,11 +18,27 @@ module.exports = {
   ...
 };
 ```
-See https://jestjs.io/docs/en/configuration#reporters-arraymodulename--modulename-options for more background on adding custom jest reporters.
+See Jest's [documentation](https://jestjs.io/docs/en/configuration#reporters-arraymodulename--modulename-options) for more background on adding custom jest reporters.
 
-3. run the performance benchmark with the included script `node_modules/jest-reporter-perf-stats/scripts/perf.sh`.
-Usage: `node_modules/jest-reporter-perf-stats/scripts/perf.sh <maxWorkers> <number of iterations>`
-Example: `node_modules/jest-reporter-perf-stats/scripts/perf.sh 23 3` to run up to 23 max workers in the benchmark, each maxWorker test run will be done 3 times.
+3. run the performance benchmark with the included script `node_modules/jest-reporter-perf-stats/scripts/perf.sh`. 
+Usage: `node_modules/jest-reporter-perf-stats/scripts/perf.sh <maxWorkers> <number of iterations>` 
+Example: `node_modules/jest-reporter-perf-stats/scripts/perf.sh 23 3` to run up to 23 max workers in the benchmark, each maxWorker test run will be done 3 times. 
 
 ## Contributing
 PRs welcome!  Would be curious to know how to alias the reporter with just a name, similiar to other reporters like `jest-stare` or `default`.
+
+Sanity check that reporter works:
+1. Run `npm run test_one_worker`
+2. Ensure log.csv outputs correctly and CLI outputs something akin to:
+
+```
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       2 failed, 2 skipped, 1 todo, 3 passed, 8 total
+Snapshots:   0 total
+Time:        0.815 s, estimated 1 s
+Ran all test suites.
+---------------
+total time for run is 0.818 seconds for 1 maxWorkers.
+Total tests: 8 Total suites: 2.
+---------------
+```
