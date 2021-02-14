@@ -32,7 +32,7 @@ Sanity check that reporter works:
 1. Run `npm run test_one_worker`  
 2. Ensure log.csv outputs correctly and CLI outputs something akin to:
 
-![Image of log.csv File Output](https://github.com/tophercf/jest-reporter-perf-stats/blob/main/img/log_csv.png)
+![Image of log.csv File Output](https://github.com/tophercf/jest-reporter-perf-stats/blob/main/img/log_csv.PNG)
 
 ```
 Test Suites: 1 failed, 1 passed, 2 total
