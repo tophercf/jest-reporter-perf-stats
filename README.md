@@ -6,7 +6,7 @@ I thought logging to a csv file would be useful, if user wanted to keep info bey
 
 Stats recorded: total tests, total suites, total time in seconds, max workers for the run 
 
-## Installing
+## Installing & Usage with Jest
 1. install custom reporter to your repo that you want to benchmark test duration 
 `npm i --save-dev jest-reporter-perf-stats`
 
@@ -20,9 +20,11 @@ module.exports = {
 ```
 See Jest's [documentation](https://jestjs.io/docs/en/configuration#reporters-arraymodulename--modulename-options) for more background on adding custom jest reporters.
 
-3. run the performance benchmark with the included script `node_modules/jest-reporter-perf-stats/scripts/perf.sh`. 
-Usage: `./node_modules/jest-reporter-perf-stats/scripts/perf.sh <maxWorkers> <number of iterations>`  
-Example: `./node_modules/jest-reporter-perf-stats/scripts/perf.sh 23 3` to run up to 23 max workers in the benchmark, each maxWorker test run will be done 3 times. 
+3. run the performance benchmark with the included script `node_modules/jest-reporter-perf-stats/scripts/perf.sh`.  
+
+Usage: `./node_modules/jest-reporter-perf-stats/perf.sh <maxWorkers> <number of iterations>`  
+
+Example: `./node_modules/jest-reporter-perf-stats/perf.sh 23 3` to run up to 23 max workers in the benchmark, each maxWorker test run will be done 3 times. 
 
 ## Contributing
 PRs welcome! 

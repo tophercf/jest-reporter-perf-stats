@@ -5,7 +5,7 @@
   "main": "build/index.js",
   "files": [
     "build/**/*",
-    "scripts/**/*"
+    "perf.sh"
   ],
   "scripts": {
     "test_one_worker": "tsc && jest --maxWorkers=1",
