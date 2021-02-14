@@ -1,6 +1,6 @@
 {
   "name": "jest-reporter-perf-stats",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Jest reporter to log performance statistics for various maxWorker configurations",
   "main": "build/index.js",
   "files": [
