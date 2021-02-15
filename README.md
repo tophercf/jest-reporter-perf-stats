@@ -7,8 +7,7 @@ I thought logging to a csv file would be useful, if user wanted to keep info bey
 Stats recorded: total tests, total suites, total time in seconds, max workers for the run 
 
 ## Installing & Usage with Jest
-1. install custom reporter to your repo that you want to benchmark test duration 
-`npm i --save-dev jest-reporter-perf-stats`
+1. Install: `npm i --save-dev jest-reporter-perf-stats`  
 
 2. add the custom reporter to your `jest.config.js` 
 ```
@@ -18,19 +17,25 @@ module.exports = {
   ...
 };
 ```
-See Jest's [documentation](https://jestjs.io/docs/en/configuration#reporters-arraymodulename--modulename-options) for more background on adding custom jest reporters.
 
-3. run the performance benchmark with the included script `node_modules/jest-reporter-perf-stats/scripts/perf.sh`.  
+3. Run the performance benchmark with the included script:  
+`./node_modules/jest-reporter-perf-stats/perf.sh <maxWorkers> <number of iterations>`  
 
-Usage: `./node_modules/jest-reporter-perf-stats/perf.sh <maxWorkers> <number of iterations>`  
+Example: `./node_modules/jest-reporter-perf-stats/perf.sh 23 3`  
 
-Example: `./node_modules/jest-reporter-perf-stats/perf.sh 23 3` to run up to 23 max workers in the benchmark, each maxWorker test run will be done 3 times. 
+4. View the results in log.csv, logging the following attributes: 
+- total tests
+- total suites
+- test run duration in seconds
+- number of workers  
+  
+![Image of log.csv File Output](https://github.com/tophercf/jest-reporter-perf-stats/blob/main/img/log_csv.PNG)
 
 ## Contributing
 PRs welcome! 
 
 Sanity check that reporter works:
-1. install dependencies `npm i`  
+1. Clone repo and install dependencies `npm i`  
 2. Run `npm run test_one_worker`  
 3. Ensure log.csv outputs correctly and CLI outputs something akin to:  
 
