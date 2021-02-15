@@ -21,13 +21,13 @@ module.exports = {
 3. Run the performance benchmark with the included script:  
 `./node_modules/jest-reporter-perf-stats/perf.sh <maxWorkers> <number of iterations>`  
 
-Example: `./node_modules/jest-reporter-perf-stats/perf.sh 23 3`  
+Example: `./node_modules/jest-reporter-perf-stats/perf.sh 1 1`  
 
 4. View the results in log.csv, logging the following attributes: 
-- total tests
-- total suites
+- total tests in test run
+- total suites in test run
 - test run duration in seconds
-- number of workers  
+- number of workers in test run 
   
 ![Image of log.csv File Output](https://github.com/tophercf/jest-reporter-perf-stats/blob/main/img/log_csv.PNG)
 
